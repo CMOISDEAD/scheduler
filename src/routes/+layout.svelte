@@ -3,7 +3,7 @@
 </script>
 
 <div class="min-h-screen bg-neutral-950">
-	<main class="py-2 text-white">
+	<main class="p-2 text-white">
 		<slot />
 	</main>
 </div>

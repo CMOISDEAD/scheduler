@@ -101,9 +101,35 @@
 					}
 				}
 			]
+		},
+		{
+			"name": "Calculo Integral",
+			"events": [
+				{
+					"day": "monday",
+					"time": {
+						"from": "6:00 PM",
+						"to": "8:00 PM"
+					}
+				},
+				{
+					"day": "friday",
+					"time": {
+						"from": "8:00 PM",
+						"to": "10:00 PM"
+					}
+				},
+				{
+					"day": "saturday",
+					"time": {
+						"from": "1:00 PM",
+						"to": "2:00 PM"
+					}
+				}
+			]
 		}
 	],
-	"days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+	"days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
 	"hours": [
 		"7:00 AM",
 		"8:00 AM",

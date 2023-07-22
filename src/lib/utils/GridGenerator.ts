@@ -1,9 +1,9 @@
 function getGridStartColumn(clase: any, daysOfWeek: string | any[]) {
-	return daysOfWeek.indexOf(clase.day) + 2;
+	return daysOfWeek.indexOf(clase.day) + 1;
 }
 
 function getGridEndColumn(clase: ScheduleType, daysOfWeek: string | any[]) {
-	return daysOfWeek.indexOf(clase.day) + 3;
+	return daysOfWeek.indexOf(clase.day) + 2;
 }
 
 function getGridStartRow(clase: ScheduleType, hoursOfDay: string | any[]) {
@@ -19,4 +19,20 @@ export function getLayout(clase: ScheduleType, daysOfWeek: string[], hoursOfDay:
 		grid-column-end: ${getGridEndColumn(clase, daysOfWeek)};
 		grid-row-start: ${getGridStartRow(clase, hoursOfDay)};
 		grid-row-end: ${getGridEndRow(clase, hoursOfDay)};`;
+}
+
+export function createSchedule(classes): ScheduleType[] {
+	let schedule: ScheduleType[] = [];
+	classes.forEach((clase) => {
+		clase.events.forEach((event) => {
+			schedule.push({
+				name: clase.name,
+				duration: `${event.time.from} - ${event.time.to}`,
+				day: event.day.charAt(0).toUpperCase() + event.day.slice(1),
+				start: event.time.from,
+				end: event.time.to
+			});
+		});
+	});
+	return schedule;
 }
