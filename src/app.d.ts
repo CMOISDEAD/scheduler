@@ -8,6 +8,17 @@ declare global {
 		// interface Platform {}
 	}
 
+	interface ClassType {
+		name: string;
+		events: {
+			day: string;
+			time: {
+				from: string;
+				to: string;
+			};
+		};
+	}
+
 	interface ScheduleType {
 		name: string;
 		duration: string;

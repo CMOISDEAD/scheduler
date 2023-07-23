@@ -19,3 +19,8 @@
 ::-webkit-scrollbar-thumb:hover {
 	background-color: #9f1239;
 }
+
+.icon {
+	@apply w-5;
+	fill: theme('textColor.neutral.500');
+}

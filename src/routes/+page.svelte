@@ -3,8 +3,8 @@
 </script>
 
 <svelte:head>
-	<title>Home</title>
-	<meta name="description" content="Svelte demo app" />
+	<title>scheduler</title>
+	<meta name="description" content="simple college schedule" />
 </svelte:head>
 
 <section>
