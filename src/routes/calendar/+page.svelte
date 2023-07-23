@@ -18,7 +18,7 @@
 </svelte:head>
 
 <div class="m-5">
-	<div class="h-[93vh] rounded-lg bg-neutral-900 p-5">
+	<div class="h-[93vh] rounded-lg bg-neutral-900/75 p-5">
 		<div class="flex h-full justify-between gap-4">
 			<SelectSubject {setSubject} />
 			<div class="grow">

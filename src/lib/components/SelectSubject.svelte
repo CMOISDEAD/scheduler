@@ -31,7 +31,7 @@
 	}
 </script>
 
-<div class="flex flex-col justify-between gap-4 overflow-y-auto rounded-lg bg-neutral-800/75 p-3">
+<div class="flex flex-col justify-between gap-4 overflow-y-auto rounded-lg bg-neutral-900 p-3">
 	<ul>
 		<li><h3 class="font-bold text-rose-700">Subjects</h3></li>
 		{#each $data.classes as subject}

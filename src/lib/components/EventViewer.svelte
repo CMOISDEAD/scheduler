@@ -54,12 +54,12 @@
 		</button>
 	</div>
 
-	<div class="mt-4 h-full overflow-y-auto rounded-lg bg-neutral-800/75 p-4">
+	<div class="mt-4 h-full overflow-y-auto rounded-lg bg-neutral-900 p-4">
 		<ul>
 			{#each subject.events as assignature}
 				<li>
 					<div
-						class="my-2 flex justify-between gap-4 rounded-lg border border-neutral-700 bg-neutral-900 p-2"
+						class="my-2 flex justify-between gap-4 rounded-lg border border-neutral-700 bg-neutral-800/40 p-2"
 					>
 						<div>
 							<h3 class="text-lg font-bold text-rose-700">{subject.name}</h3>
