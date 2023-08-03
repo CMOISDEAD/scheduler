@@ -7,7 +7,7 @@
 <div class="grid grid-cols-[79px_repeat(1,minmax(0,1fr))] gap-4">
 	<div class="grid grid-cols-1 grid-rows-[repeat(17,minmax(0,80px))] gap-3">
 		<div
-			class="flex items-center justify-center rounded-full bg-rose-700 text-lg font-bold text-neutral-400"
+			class="flex items-center justify-center rounded-full bg-rose-700 text-lg font-bold text-neutral-200"
 		>
 			{$data.classes.length}
 		</div>
