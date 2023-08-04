@@ -21,6 +21,7 @@ export function getLayout(clase: ScheduleType, daysOfWeek: string[], hoursOfDay:
 		grid-row-end: ${getGridEndRow(clase, hoursOfDay)};`;
 }
 
+// NOTE: check the differences
 export function createSchedule(classes): ScheduleType[] {
 	let schedule: ScheduleType[] = [];
 	classes.forEach((clase) => {
@@ -36,3 +37,21 @@ export function createSchedule(classes): ScheduleType[] {
 	});
 	return schedule;
 }
+export const generateGraph = (classes) => {
+	let graph = {};
+	classes.forEach((clase) => {
+		clase.events.forEach((event) => {
+			if (!graph[event.day]) {
+				graph[event.day] = [];
+			}
+			graph[event.day].push({
+				name: clase.name,
+				duration: `${event.time.from} - ${event.time.to}`,
+				day: event.day.charAt(0).toUpperCase() + event.day.slice(1),
+				start: event.time.from,
+				end: event.time.to
+			});
+		});
+	});
+	return graph;
+};
