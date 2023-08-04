@@ -21,8 +21,14 @@
 	<div class="h-[93vh] rounded-lg bg-neutral-900/75 p-5">
 		<div class="flex h-full justify-between gap-4">
 			<SelectSubject {setSubject} />
-			<div class="grow">
-				<EventViewer {subject} />
+			<div class="h-full grow">
+				{#if subject.name}
+					<EventViewer {subject} />
+				{:else}
+					<div class="flex h-full content-center items-center justify-center">
+						<h3 class="text-3xl font-bold text-rose-700">select one subject</h3>
+					</div>
+				{/if}
 			</div>
 		</div>
 	</div>

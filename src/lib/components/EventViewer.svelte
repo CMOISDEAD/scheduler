@@ -46,7 +46,7 @@
 		<Select bind:value={event.time.from} placeholder="select start hour" list={$data.hours} />
 		<Select bind:value={event.time.to} placeholder="select end hour" list={$data.hours} />
 		<button
-			class="rounded-lg bg-green-600 px-2 py-1 text-neutral-300 transition-colors hover:bg-green-700 hover:text-neutral-200"
+			class="rounded-lg border border-green-600 px-2 py-1 text-neutral-300 transition-colors hover:bg-green-600 hover:text-neutral-200 disabled:border-slate-300 disabled:text-slate-300 disabled:hover:bg-inherit"
 			disabled={!subject.name || !event.time.from || !event.time.to}
 			on:click={handleAdd}
 		>
@@ -61,7 +61,7 @@
 					<div
 						class="my-2 flex justify-between gap-4 rounded-lg border border-neutral-700 bg-neutral-800/40 p-2"
 					>
-						<div>
+						<div class="grow">
 							<h3 class="text-lg font-bold text-rose-700">{subject.name}</h3>
 							<p class="text-sm text-neutral-500">
 								{assignature.day}
@@ -69,7 +69,7 @@
 							</p>
 						</div>
 						<button
-							class="rounded-lg bg-red-500 p-2 font-bold"
+							class="w-12 rounded-lg border border-rose-700 p-2 font-bold transition-colors hover:bg-rose-800"
 							on:click={() => handleDelete(assignature)}>&times;</button
 						>
 					</div>

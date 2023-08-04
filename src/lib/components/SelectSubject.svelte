@@ -28,6 +28,7 @@
 		const newSubjects = $data.classes.filter((item) => item.name !== name);
 		$data.classes = newSubjects;
 		window.localStorage.setItem('data', JSON.stringify($data));
+		setSubject({ name: '', events: [] });
 	}
 </script>
 
@@ -41,7 +42,7 @@
 					on:click={handleSelect}>{subject.name}</button
 				>
 				<button
-					class="w-1/6 rounded-lg bg-red-600 p-2 font-bold hover:bg-red-700"
+					class="w-1/6 rounded-lg border border-rose-700 p-2 font-bold transition-colors hover:bg-rose-800"
 					name={subject.name}
 					on:click={handleDelete}>&times;</button
 				>
@@ -56,7 +57,7 @@
 			bind:value={newSubject.name}
 		/>
 		<button
-			class="w-full rounded-lg bg-green-600 p-2 text-neutral-300 transition-colors hover:bg-green-700 hover:text-neutral-200"
+			class="w-full rounded-lg border border-green-600 p-2 text-neutral-300 transition-colors hover:bg-green-700 hover:text-neutral-200 disabled:border-slate-300 disabled:text-slate-300 disabled:hover:bg-inherit"
 			on:click={handleAdd}
 			disabled={!newSubject.name}>Add new</button
 		>
