@@ -37,7 +37,7 @@
 				{#if schedule.find((clase) => clase.day === day && clase.start === hour)}
 					{#each schedule.filter((clase) => clase.day === day && clase.start === hour) as clase}
 						<div
-							class="flex flex-col content-center items-center justify-center rounded-lg border border-neutral-800 bg-neutral-900/75 transition-colors hover:cursor-pointer hover:border-neutral-700"
+							class="flex flex-col content-center items-center justify-center truncate rounded-lg border border-neutral-800 bg-neutral-900/75 p-2 transition-colors hover:cursor-pointer hover:border-neutral-700"
 							style={getLayout(clase, $data.days, $data.hours)}
 						>
 							<h3 class="text-center text-xl font-bold text-rose-700">{clase.name}</h3>
