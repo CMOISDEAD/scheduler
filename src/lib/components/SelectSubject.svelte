@@ -57,7 +57,7 @@
 			bind:value={newSubject.name}
 		/>
 		<button
-			class="w-full rounded-lg border border-green-600 p-2 text-neutral-300 transition-colors hover:bg-green-700 hover:text-neutral-200 disabled:border-slate-300 disabled:text-slate-300 disabled:hover:bg-inherit"
+			class="w-full rounded-lg border border-green-600 p-2 text-neutral-300 transition-colors hover:bg-green-700 hover:text-neutral-200 disabled:cursor-not-allowed disabled:border-slate-300 disabled:text-slate-300 disabled:hover:bg-inherit"
 			on:click={handleAdd}
 			disabled={!newSubject.name}>Add new</button
 		>

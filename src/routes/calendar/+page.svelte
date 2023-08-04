@@ -2,6 +2,7 @@
 	// @ts-nocheck
 	import EventViewer from '$lib/components/EventViewer.svelte';
 	import SelectSubject from '$lib/components/SelectSubject.svelte';
+	import OldMan from '$lib/svg/OldMan.svelte';
 
 	let subject = {
 		name: '',
@@ -25,8 +26,9 @@
 				{#if subject.name}
 					<EventViewer {subject} />
 				{:else}
-					<div class="flex h-full content-center items-center justify-center">
-						<h3 class="text-3xl font-bold text-rose-700">select one subject</h3>
+					<div class="flex h-full flex-col content-center items-center justify-center gap-4">
+						<OldMan class="h-[20vh] fill-neutral-500" />
+						<h3 class="text-neutral-500">select one subject</h3>
 					</div>
 				{/if}
 			</div>

@@ -46,7 +46,7 @@
 		<Select bind:value={event.time.from} placeholder="select start hour" list={$data.hours} />
 		<Select bind:value={event.time.to} placeholder="select end hour" list={$data.hours} />
 		<button
-			class="rounded-lg border border-green-600 px-2 py-1 text-neutral-300 transition-colors hover:bg-green-600 hover:text-neutral-200 disabled:border-slate-300 disabled:text-slate-300 disabled:hover:bg-inherit"
+			class="rounded-lg border border-green-600 px-2 py-1 text-neutral-300 transition-colors hover:bg-green-600 hover:text-neutral-200 disabled:cursor-not-allowed disabled:border-slate-300 disabled:text-slate-300 disabled:hover:bg-inherit"
 			disabled={!subject.name || !event.time.from || !event.time.to}
 			on:click={handleAdd}
 		>
