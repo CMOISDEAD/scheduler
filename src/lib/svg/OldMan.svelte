@@ -1,5 +1,5 @@
 <svg
-	class="h-[70vh] fill-neutral-500/75"
+	class="hidden h-[70vh] fill-neutral-500/75 lg:block"
 	version="1.2"
 	width="107.22945mm"
 	height="202.68016mm"

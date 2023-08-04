@@ -36,12 +36,12 @@
 	}
 </script>
 
-<div class="h-[76.5vh]">
+<div class="h-full lg:h-[76.5vh]">
 	<div class="my-1 inline-flex gap-4">
 		<h3 class="font-bold text-rose-700">Subject Name:</h3>
 		<p>{subject.name || 'select one subject'}</p>
 	</div>
-	<div class="flex gap-4">
+	<div class="flex flex-wrap gap-4">
 		<Select bind:value={event.day} placeholder="select day" list={$data.days} />
 		<Select bind:value={event.time.from} placeholder="select start hour" list={$data.hours} />
 		<Select bind:value={event.time.to} placeholder="select end hour" list={$data.hours} />
@@ -54,7 +54,7 @@
 		</button>
 	</div>
 
-	<div class="mt-4 h-full overflow-y-auto rounded-lg bg-neutral-900 p-4">
+	<div class="mt-4 overflow-y-auto rounded-lg bg-neutral-900 p-4 lg:h-full">
 		<ul>
 			{#each subject.events as assignature}
 				<li>
